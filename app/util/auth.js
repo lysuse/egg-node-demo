@@ -2,7 +2,7 @@ const crypto = require('crypto');
 
 // 设备信息，随机串， 签名后的token
 module.exports = (authPlain, nonstr, token) => {
-    //1. 收银机websocket连接参数格式 pos-deviceId-merchantId-branchId
+    //1. websocket连接参数格式 server-deviceId-merchantId-branchId
     //2. h5手机网页端连接参数格式 wap-userId-merchantId-branchId-tableId
     //3. token 生产规则 sha1(clientAuth, 'kemai-yinqian-^iHrbZ1h').toHex()
     const values = authPlain.split('-');
